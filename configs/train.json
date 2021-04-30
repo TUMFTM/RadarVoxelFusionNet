@@ -1,0 +1,39 @@
+{
+    "loss_config": {
+        "score_loss_config": {
+            "criteria": "binary_focal",
+            "criteria_config": {
+                "gamma": 0.0,
+                "alpha": 0.6,
+                "reduce": false,
+                "logits": false
+            },
+            "normalize_by_type": true
+        },
+        "reg_loss_config": {
+            "criteria": "smoothL1"
+        },
+        "dir_loss_config": {
+            "criteria": "binary_cross_entropy"
+        },
+        "score_loss_weight": 2.0,
+        "reg_loss_weight": 1.0,
+        "dir_loss_weight": 0.2
+    },
+    "augment": true,
+    "batch_size": 4,
+    "optimizer": "AMSGrad",
+    "learning_rate": 0.001,
+    "epsilon": 1e-08,
+    "weight_decay": 0.0,
+    "epochs": 1000,
+    "out_path": "/persistent_storage/out/",
+    "log_interval": 500,
+    "checkpoint_interval": 4,
+    "eval_interval": 4,
+    "eval_on_train_fraction": 0.1,
+    "data_loader_workers": 6,
+    "device_ids": [
+        0
+    ]
+}

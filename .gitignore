@@ -1,0 +1,11 @@
+.ipynb_checkpoints
+__pycache__/
+.idea/
+assets/
+models/
+*.egg-info
+build/
+.vscode
+*code-workspace
+runs/
+checkpoints/

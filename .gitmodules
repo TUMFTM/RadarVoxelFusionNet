@@ -1,0 +1,3 @@
+[submodule "thirdparty/SparseConvNet"]
+	path = thirdparty/SparseConvNet
+	url = git@github.com:facebookresearch/SparseConvNet.git

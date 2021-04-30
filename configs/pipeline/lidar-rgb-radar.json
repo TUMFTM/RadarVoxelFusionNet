@@ -1,0 +1,136 @@
+{
+    "dataset_config": {
+        "root_path": "/nuscenes",
+        "version": "v1.0-trainval",
+        "cam_name": "CAM_FRONT",
+        "radar_name": "RADAR_FRONT",
+        "lidar_sweeps": 3,
+        "use_lidar": true,
+        "use_radar": true,
+        "use_rgb": true,
+        "radar_sweeps": 3,
+        "min_dist": 1.0,
+        "fill_type": null,
+        "img_size": [
+            1600,
+            900
+        ],
+        "pointcloud_range": [
+            [
+                1.0,
+                50
+            ],
+            [
+                -20.0,
+                20.0
+            ],
+            [
+                -1.0,
+                3.0
+            ]
+        ],
+        "auto_offset": true,
+        "coord_offsets": [
+            0,
+            20.0,
+            1
+        ],
+        "max_points": 40000,
+        "categories": [
+            [
+                "car"
+            ]
+        ],
+        "voxel_grid_config": {
+            "voxel_size": [
+                0.2,
+                0.2,
+                0.4
+            ],
+            "max_points_per_voxel": 40
+        },
+        "augmentation_config": {
+            "box_rotation": 0.3141592653589793,
+            "box_translation": [
+                1.0,
+                1.0,
+                0.3
+            ],
+            "global_rotation": 0.3141592653589793,
+            "global_scale": 0.05
+        }
+    },
+    "model_config": {
+        "svfeb_config": {
+            "in_channels": 13,
+            "hidden_channels": 32,
+            "out_channels": 128
+        },
+        "cmb_config": {
+            "input_spatial_size": [
+                11,
+                204,
+                252
+            ],
+            "expected_output_spatial_size": [
+                3,
+                200,
+                248
+            ],
+            "in_channels": 128,
+            "out_channels": 64
+        },
+        "cob_config": {
+            "in_channels": 192,
+            "hidden_channels": 256,
+            "in_spatial_size": [
+                200,
+                248
+            ]
+        },
+        "head_config": {
+            "num_classes": 2,
+            "anchors_per_position": 2,
+            "in_channels": 768
+        },
+        "middle_block": "sparse"
+    },
+    "target_config": {
+        "pos_threshold": 0.35,
+        "neg_threshold": 0.3,
+        "pos_dist_threshold": 0.5,
+        "anchor_config": {
+            "feature_map_shape": [
+                100,
+                124
+            ],
+            "anchor_sizes": [
+                [
+                    1.92,
+                    4.62,
+                    1.69
+                ]
+            ],
+            "anchor_rotations": [
+                0,
+                1.5707963267948966
+            ],
+            "anchor_range": [
+                [
+                    0,
+                    50
+                ],
+                [
+                    0,
+                    40
+                ]
+            ],
+            "center_z": 2.0
+        },
+        "sine_yaw_targets": true
+    },
+    "infer_config": {
+        "nms_threshold": 0.1,
+        "min_confidence": 0.001
+    }
+}

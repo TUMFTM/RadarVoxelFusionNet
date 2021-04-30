@@ -1,0 +1,13 @@
+{
+    "distance_thresholds": [
+        0.5,
+        1,
+        2,
+        4
+    ],
+    "data_loader_workers": 6,
+    "batch_size": 4,
+    "device_ids": [
+        0
+    ]
+}

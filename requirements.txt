@@ -1,0 +1,10 @@
+torch==1.6.0
+torchvision==0.7.0
+open3d==0.10.0.0
+scikit-image==0.17.2
+termcolor==1.1.0
+nuscenes-devkit==1.0.9
+tensorboard==2.3.0
+numpy==1.19.0
+pickle5==0.0.11
+progressbar2==3.53.1
