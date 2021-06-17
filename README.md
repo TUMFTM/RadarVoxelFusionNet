@@ -9,7 +9,7 @@ This project provides a 3D object detection network. The project focuses on the 
 
 - Install docker on your machine.
 - Download the nuscenes data set according to their [guidelines](https://github.com/nutonomy/nuscenes-devkit#nuScenes).
-- Clone this repository with submodules (`git clone --recursive`) into `<local_path-to-repository>`.
+- Clone this repository with submodules (`git clone --recursive git@github.com:TUMFTM/RadarVoxelFusionNet.git`) into `<local_path-to-repository>`.
 - For an out-of-the-box inference, download: the trained checkpoint, model config and split configurations [here](https://syncandshare.lrz.de/getlink/fiHq9RPabSC7YF4Q9oGBVLKS/) and store them as your <local_data_folder>.
 - Build the docker image:
 
@@ -142,5 +142,9 @@ If you find our work useful in your research, please consider citing:
         author={Felix Nobis, Ehsan Shafiei, Phillip Karle, Johannes Betz and Markus Lienkamp},
         title={Radar Voxel Fusion for 3D Object Detection},
         journal={Applied Sciences},
-        year={2021}
+        volume={11},
+        year={2021},
+        number={12},
+        article-number={5598},
+        doi={https://doi.org/10.3390/app11125598}
     }
